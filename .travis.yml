@@ -1,0 +1,6 @@
+language: csharp
+
+script:
+ - xbuild /p:Configuration=Release ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
+ - xbuild /p:Configuration=Release LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
+
