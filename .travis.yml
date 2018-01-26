@@ -1,9 +1,10 @@
 language: csharp
 dotnet: 2.0
+install:
+ - nuget restore ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
+ - nuget restore LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
 script:
  - dotnet restore
- - nuget restore ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
  - xbuild /p:Configuration=Release ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
- - nuget restore LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
  - xbuild /p:Configuration=Release LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
 
