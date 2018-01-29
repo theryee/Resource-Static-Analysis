@@ -1,6 +1,3 @@
-environment:
-  matrix:
-    - solution_name: ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
-    - solution_name: LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
 build_script:
-  - msbuild %solution_name%
+  - msbuild ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
+  - msbuild LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
