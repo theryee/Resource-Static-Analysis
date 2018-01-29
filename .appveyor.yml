@@ -1,4 +1,6 @@
 environment:
   matrix:
-    - solution_name: ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
-    - solution_name: LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
+    - rsa: ResourceStaticAnalysis/src/ResourceStaticAnalysis.sln
+    - lcsa: LocalizationContextStaticAnalysis/src/LocalizationContextStaticAnalysis.sln
+  build_script:
+    - msbuild %rsa%
